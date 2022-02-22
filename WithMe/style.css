@@ -1,102 +1,78 @@
 :root {
-  /* Color */
-  --white-color: #f6f5f1;
-  --beige-color: #dcd7c9;
-  --brown-color: #966844;
-  --light-blue-color: #c2c8c6;
-  --green-color: #3f4e4f;
-  --dark-color: #2c3639;
+  /* Light Mode Colors */
+  --lightMode-orange-color: #ee4e34;
+  --lightMode-light-color: #fcedda;
 
-  /* Font-size */
-  --font-large: 25px;
-  --font-medium: 20px;
-  --font-small: 18px;
+  /* Dark Mode Colors */
+  --darkMode-dark-color: #262223;
+  --darkMode-light-color: #ddc6b6;
+
+  /* size */
+  --border-radius: 8px;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
   margin: 0;
-  background-color: var(--white-color);
+  background-color: var(--lightMode-light-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
   font-family: "Josefin Sans", sans-serif;
+  color: var(--lightMode-orange-color);
+  font-size: 50px;
 }
 
-/* Header */
-
-a {
-  text-decoration: none;
-}
-
-.header .info a,
-span {
-  color: var(--dark-color);
-}
-
-.header {
+.timer-container {
+  background-color: var(--lightMode-orange-color);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5rem;
-  background-color: var(--light-blue-color);
-  position: sticky;
-  top: 0;
-}
-
-.header .titleAndLogo {
-  display: flex;
-  align-items: center;
-}
-
-.header .titleAndLogo i {
-  color: var(--green-color);
-  font-size: var(--font-medium);
-  margin-left: 0.5rem;
-}
-
-.header .titleAndLogo .title {
-  font-weight: bold;
-  font-size: var(--font-large);
-  padding: 0.5rem;
-}
-
-.header .titleAndLogo .title a {
-  color: var(--dark-color);
-}
-.header .info {
-  margin-right: 0.5rem;
-}
-
-/* Timer */
-.timer {
-  background-color: var(--green-color);
-  margin: 0;
-  width: 25%;
-  height: 50%;
-  border-radius: 50px;
-  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.timer .time_In_Timer {
-  font-size: var(--font-large);
-  color: var(--white-color);
+.timer-container span {
+  font-size: 60px;
+  color: var(--lightMode-light-color);
 }
 
-/* ToDo List */
-.todoList {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
+.pauseBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--lightMode-light-color);
+  border: var(--lightMode-light-color) 2px solid;
+  font-size: 20px;
+  position: absolute;
+  top: 400px;
+  padding: 3px 10px;
+  border-radius: 6px;
 }
 
-.todoList .todoItems {
-  display: flex;
-}
-
-.main {
+.mode {
+  border: var(--lightMode-orange-color) 2px solid;
+  border-radius: var(--border-radius);
+  width: 70%;
+  height: 50px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
+}
+
+.mode .mode-item {
+  background-color: var(--lightMode-orange-color);
+  color: var(--lightMode-light-color);
+  width: 120px;
+  height: 90%;
+  border-radius: var(--border-radius);
 }

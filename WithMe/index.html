@@ -4,43 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WithMe_Home</title>
+    <title>WithMe</title>
   </head>
-
   <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="titleAndLogo">
-        <i class="fas fa-check-double"></i>
-        <div class="title"><a href="index.html">WithMe</a></div>
+    <div class="wrapper">
+      <h1 class="main-title">With Me</h1>
+      <div class="timer-container">
+        <span>50:00</span>
+        <button class="pauseBtn">Pause</button>
       </div>
-      <div class="info">
-        <a class="login" href="#">Login</a>
-        <span class="bar">|</span>
-        <i class="fas fa-user-circle"></i>
+      <div class="mode">
+        <span class="timerMode mode-item">Timer</span>
+        <span class="shortbreakMode mode-item">Short Break</span>
+        <span class="longbreakMode mode-item">Long Break</span>
       </div>
-    </header>
-
-    <!-- Timer -->
-    <div class="main">
-      <div class="timer"><span class="time_In_Timer">00:00</span></div>
-      <!-- ToDo List -->
-      <ul class="todoList">
-        <div class="todoItems"><input class="chkBox" type="checkbox"><input class="textBox" type="text"></input></div>
-        <div class="todoItems"><input class="chkBox" type="checkbox"><input class="textBox" type="text"></input></div>
-        <div class="todoItems"><input class="chkBox" type="checkbox"><input class="textBox" type="text"></input></div>
-      </ul>
+      <div class="todoList-container"></div>
     </div>
-    <!-- Calendar -->
+    <script src="/WithMe/JavaScript/main.js"></script>
   </body>
 </html>
